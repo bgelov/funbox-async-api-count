@@ -45,7 +45,7 @@ def async_main(srv_list):
 
 if __name__ == '__main__':
     # Список машин для обращения
-    server_list = ["prod-01.ip03.ru", "localhost"]
+    server_list = ["maria.ru", "rose.ru", "sina.ru"]
     # Шедуллер вызывает async_main в каждые 00 секунд каждой минуты
     schedule.every().minute.at(":00").do(async_main, server_list)
     while True:
