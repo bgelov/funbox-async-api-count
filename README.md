@@ -20,3 +20,14 @@ GET http://servername/api/count
 2022-05-20 13:02:00 rose.ru 33
 2022-05-20 13:02:00 sina.ru 34
 ```
+
+## Решение
+
+- Обращения к API происходит каждую минуту в 00 секунд
+- Обращения происходят асинхронно
+
+![pycharm64_ZBFp1rLoGB](https://github.com/bgelov/funbox-async-api-count/assets/5302940/9d7c4b49-6dc9-46dd-98c1-a3d40e5c93e4)
+
+- В случае недоступности хоста выводим в консоль ошибку и значение прочерк
+
+![buidL4lMP5](https://github.com/bgelov/funbox-async-api-count/assets/5302940/091526d1-94d2-4aa3-bfe1-942976135a0b)
