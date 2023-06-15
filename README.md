@@ -23,7 +23,7 @@ GET http://servername/api/count
 
 ## Решение
 
-Код: main.py
+Код: [main.py](https://github.com/bgelov/funbox-async-api-count/blob/main/main.py)
 
 - Обращения к API происходит каждую минуту в 00 секунд
 - Обращения происходят асинхронно
