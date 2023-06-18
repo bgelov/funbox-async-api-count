@@ -33,3 +33,29 @@ GET http://servername/api/count
 - В случае недоступности хоста выводим в консоль ошибку и значение прочерк
 
 ![buidL4lMP5](https://github.com/bgelov/funbox-async-api-count/assets/5302940/091526d1-94d2-4aa3-bfe1-942976135a0b)
+
+## Тестовое API на Powershell Pode
+
+```
+Start-PodeServer {
+
+    # Запускаем сервер на http://localhost:80
+    Add-PodeEndpoint -Address localhost -Port 80 -Protocol Http
+
+    Add-PodeRoute -Method Get -Path '/api/count' -ScriptBlock {
+        # Возвращаем ранодомное число в JSON
+        Write-PodeJsonResponse -Value @{"count" = $(Get-Random -Minimum 0 -Maximum 999) }
+    }
+}
+```
+
+## Тестовая отдача JSON на nginx
+
+```
+server {
+        location ~ ^/api/count {
+           default_type application/json;
+           return 200 '{"count": 111}';
+        }
+}
+```
