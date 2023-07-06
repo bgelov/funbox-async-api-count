@@ -1,5 +1,3 @@
-# funbox-async-api-count
-
 ## Задача
 ```
 Есть три сервера "maria.ru", "rose.ru", "sina.ru", которые по GET-запросу отдают свою метрику.
